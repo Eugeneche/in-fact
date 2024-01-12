@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-fit.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+  <div class="fitting__wrapper">
+
+    <div class="fitting__switcher">
+      <div id="pillow" style="background-image: url('/user/documents/images/pillow.jpg')" class="fitting__subject-img fitting-active"></div>
+      <div id="bed" style="background-image: url('/user/documents/images/bed.jpg')" class="fitting__subject-img"></div>
+      <div id="smallbed" style="background-image: url('/user/documents/images/smallbed.jpg')" class="fitting__subject-img"></div>
+      <div id="pillow2" style="background-image: url('/user/documents/images/pillow2.jpg')" class="fitting__subject-img"></div>
+      <div id="buggy" style="background-image: url('/user/documents/images/buggy.jpg')" class="fitting__subject-img"></div>
+      <div id="curtains" style="background-image: url('/user/documents/images/curtains.jpg')" class="fitting__subject-img"></div>
+    </div>
+
+    <div class="fitting__window">
+
+      <img src="/user/documents/images/pillow.jpg" data-switcher="pillow" class="fitting__subject-bg fitting-shown"></img>
+      <img src="/user/documents/images/bg_bed.png" data-switcher="bed" class="fitting__subject-bg"></img>
+      <img src="/user/documents/images/bg_smallbed.jpg" data-switcher="smallbed" class="fitting__subject-bg"></img>
+      <img src="/user/documents/images/pillow2.jpg" data-switcher="pillow2" class="fitting__subject-bg"></img>
+      <img src="/user/documents/images/buggy.jpg" data-switcher="buggy" class="fitting__subject-bg"></img>
+      <img src="/user/documents/images/curtains.jpg" data-switcher="curtains" class="fitting__subject-bg"></img>
+  
+      <div class="fitting__container-svg" data-switcher="pillow">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+          <mask id="maskPillow">
+            <image href="/user/documents/images/pillow-mask.png" width="735" height="735"></image>
+          </mask>
+          <pattern id="patternPillow" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+            <image href="" width="100%"></image>
+          </pattern>
+          <rect mask="url(#maskPillow)" fill="url(#patternPillow)" width="735" height="735"></rect>
+        </svg>
+      </div>
+
+      <div class="fitting__container-svg" data-switcher="bed">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+          <mask id="maskBedLeftPillow">
+            <image href="/user/documents/images/bed-mask-pillow-left.png" width="735" height="735"></image>
+          </mask>
+          <pattern id="patternBedLeftPillow" width="100%" height="100%" linenelement="leftPillow" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+            <image href="" width="100%"></image>
+          </pattern>
+          <rect mask="url(#maskBedLeftPillow)" fill="url(#patternBedLeftPillow)" width="735" height="735"></rect>
+        </svg>
+      </div>
+
+      <div class="fitting__container-svg" data-switcher="bed">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+            <mask id="maskBedRightPillow">
+              <image href="/user/documents/images/bed-mask-pillow-right.png" width="735" height="735"></image>
+            </mask>
+            <pattern id="patternBedRightPillow" width="100%" height="100%" linenelement="rightPillow" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+              <image href="" width="100%"></image>
+            </pattern>
+            <rect mask="url(#maskBedRightPillow)" fill="url(#patternBedRightPillow)" width="735" height="735"></rect>
+        </svg>
+      </div>
+
+      <div class="fitting__container-svg" data-switcher="bed">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+            <mask id="maskBedDuvetCover">
+              <image href="/user/documents/images/bed-mask-blanket.png" width="735" height="735"></image>
+            </mask>
+            <pattern id="patternBedDuvetCover" width="100%" height="100%" linenelement="duvetCover" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+              <image href="" width="100%"></image>
+            </pattern>
+            <rect mask="url(#maskBedDuvetCover)" fill="url(#patternBedDuvetCover)" width="735" height="735"></rect>
+        </svg>
+      </div>
+
+      <div class="fitting__container-svg" data-switcher="smallbed">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+            <mask id="maskSmallbedPillow">
+              <image href="/user/documents/images/smallbed-mask-pillow.png" width="735" height="735"></image>
+            </mask>
+            <pattern id="patternSmallbedPillow" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+              <image href="" width="100%"></image>
+            </pattern>
+            <rect mask="url(#maskSmallbedPillow)" fill="url(#patternSmallbedPillow)" width="735" height="735"></rect>
+        </svg>
+      </div>
+
+      <div class="fitting__container-svg" data-switcher="smallbed">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+            <mask id="maskSmallbedDuvetCover">
+              <image href="/user/documents/images/smallbed-mask-blanket.png" width="735" height="735"></image>
+            </mask>
+            <pattern id="patternSmallbedDuvetCover" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+              <image href="" width="100%"></image>
+            </pattern>
+            <rect mask="url(#maskSmallbedDuvetCover)" fill="url(#patternSmallbedDuvetCover)" width="735" height="735"></rect>
+        </svg>
+      </div>
+
+      <div class="fitting__container-svg" data-switcher="pillow2">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+            <mask id="maskPillow2">
+                <image href="/user/documents/images/pillow2-mask.png" width="735" height="735"></image>
+            </mask>
+            <pattern id="patternPillow2" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+              <image href="" width="100%"></image>
+            </pattern>
+            <rect mask="url(#maskPillow2)" fill="url(#patternPillow2)" width="735" height="735"></rect>
+        </svg>
+      </div>
+
+      <div class="fitting__container-svg" data-switcher="buggy">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+            <mask id="maskBuggy">
+              <image href="/user/documents/images/buggy-mask.png" width="735" height="735"></image>
+            </mask>
+            <pattern id="patternBuggy" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+              <image href="" width="100%"></image>
+            </pattern>
+            <rect mask="url(#maskBuggy)" fill="url(#patternBuggy)" width="735" height="735"></rect>
+        </svg>
+      </div>
+
+      <div class="fitting__container-svg" data-switcher="curtains">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+            <mask id="maskCurtains">
+              <image href="/user/documents/images/curtains-mask.png" width="735" height="735"></image>
+            </mask>
+            <pattern id="patternCurtains" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+              <image href="" width="100%"></image>
+            </pattern>
+            <rect mask="url(#maskCurtains)" fill="url(#patternCurtains)" width="735" height="735"></rect>
+        </svg>
+      </div>
+
+    </div>
+
+    <div class="fitting__settings">
+      <div class="fitting__settings-header">
+
+      </div>
+
+      <div class="fitting__settings-thumbs">
+        <img class="fitting__settings-thumb-item" src="/user/documents/patterns/Aircrafts.jpg"></img>
+        <img class="fitting__settings-thumb-item" src="/user/documents/patterns/AkvareloveKosatce.jpg"></img>
+        <img class="fitting__settings-thumb-item" src="/user/documents/patterns/AkvareloveTulipany.jpg"></img>
+        <img class="fitting__settings-thumb-item" src="/user/documents/patterns/AlstramerieNaModrem.jpg"></img>
+        <img class="fitting__settings-thumb-item" src="/user/documents/patterns/AnchorsOnWhite.jpg"></img>
+        <img class="fitting__settings-thumb-item" src="/user/documents/patterns/AnglickaZahrada.jpg"></img>
+        
+      </div>
+
+      <div class="fitting__settings-range">
+        <label for="printScale">Měřítko tisku:</label>
+        <input type="range" min="0.01" max="1" step="0.01" value="0.5" id="printScale">
+        <label for="printRotate">Otočení:</label>
+        <input type="range" min="-180" max="180" step="90" value="0" id="printRotate">
+      </div>
+  
+
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      
+      <div class="contact-info-indigo-factory">
+
+        <div class="info-indigo-factory">
+          <h3>INFORMACE</h3>
+          <ul>
+            <li><a href="/o-nas/">O nás</a></li>
+            <li><a href="/platba-a-doruceni/">Platba a doručení</a></li>
+            <li><a href="/podminky-ochrany-osobnich-udaju/">Ochrana osobních údajů</a></li>
+            <li><a href="/obchodni-podminky/">Obchodni podminky</a></li>
+            <li><a href="/kontakty/">Kontakty</a></li>
+          </ul>
+          <div>IndigoFactory &#169; 2023</div>
+        </div>
+
+        <div class="catalog-indigo-factory">
+          <h3>KATALOG</h3>
+          <ul>
+            <li><a href="/vzory-latek/">Naše tkaniny</a></li>
+            <li><a href="/satna/">Šatna</a></li>
+          </ul>
+        </div>
+        
+        <div class="contacts-indigo-factory">
+          <h3>KONTAKTY</h3>
+          <div class="contact-item">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#19196F" width="25px" height="20px" viewBox="0 0 32 32" version="1.1">
+                <path d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z"/>
+              </svg>
+              41501, Czech Republic, Teplice, Průřezná 74
+            </span>
+          </div>
+
+          <div class="contact-item">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#19196F" height="25px" width="25px" version="1.1" id="Capa_1" viewBox="0 0 473.806 473.806" xml:space="preserve">
+                <g>
+                  <g>
+                    <path d="M374.456,293.506c-9.7-10.1-21.4-15.5-33.8-15.5c-12.3,0-24.1,5.3-34.2,15.4l-31.6,31.5c-2.6-1.4-5.2-2.7-7.7-4    c-3.6-1.8-7-3.5-9.9-5.3c-29.6-18.8-56.5-43.3-82.3-75c-12.5-15.8-20.9-29.1-27-42.6c8.2-7.5,15.8-15.3,23.2-22.8    c2.8-2.8,5.6-5.7,8.4-8.5c21-21,21-48.2,0-69.2l-27.3-27.3c-3.1-3.1-6.3-6.3-9.3-9.5c-6-6.2-12.3-12.6-18.8-18.6    c-9.7-9.6-21.3-14.7-33.5-14.7s-24,5.1-34,14.7c-0.1,0.1-0.1,0.1-0.2,0.2l-34,34.3c-12.8,12.8-20.1,28.4-21.7,46.5    c-2.4,29.2,6.2,56.4,12.8,74.2c16.2,43.7,40.4,84.2,76.5,127.6c43.8,52.3,96.5,93.6,156.7,122.7c23,10.9,53.7,23.8,88,26    c2.1,0.1,4.3,0.2,6.3,0.2c23.1,0,42.5-8.3,57.7-24.8c0.1-0.2,0.3-0.3,0.4-0.5c5.2-6.3,11.2-12,17.5-18.1c4.3-4.1,8.7-8.4,13-12.9    c9.9-10.3,15.1-22.3,15.1-34.6c0-12.4-5.3-24.3-15.4-34.3L374.456,293.506z M410.256,398.806    C410.156,398.806,410.156,398.906,410.256,398.806c-3.9,4.2-7.9,8-12.2,12.2c-6.5,6.2-13.1,12.7-19.3,20    c-10.1,10.8-22,15.9-37.6,15.9c-1.5,0-3.1,0-4.6-0.1c-29.7-1.9-57.3-13.5-78-23.4c-56.6-27.4-106.3-66.3-147.6-115.6    c-34.1-41.1-56.9-79.1-72-119.9c-9.3-24.9-12.7-44.3-11.2-62.6c1-11.7,5.5-21.4,13.8-29.7l34.1-34.1c4.9-4.6,10.1-7.1,15.2-7.1    c6.3,0,11.4,3.8,14.6,7c0.1,0.1,0.2,0.2,0.3,0.3c6.1,5.7,11.9,11.6,18,17.9c3.1,3.2,6.3,6.4,9.5,9.7l27.3,27.3    c10.6,10.6,10.6,20.4,0,31c-2.9,2.9-5.7,5.8-8.6,8.6c-8.4,8.6-16.4,16.6-25.1,24.4c-0.2,0.2-0.4,0.3-0.5,0.5    c-8.6,8.6-7,17-5.2,22.7c0.1,0.3,0.2,0.6,0.3,0.9c7.1,17.2,17.1,33.4,32.3,52.7l0.1,0.1c27.6,34,56.7,60.5,88.8,80.8    c4.1,2.6,8.3,4.7,12.3,6.7c3.6,1.8,7,3.5,9.9,5.3c0.4,0.2,0.8,0.5,1.2,0.7c3.4,1.7,6.6,2.5,9.9,2.5c8.3,0,13.5-5.2,15.2-6.9    l34.2-34.2c3.4-3.4,8.8-7.5,15.1-7.5c6.2,0,11.3,3.9,14.4,7.3c0.1,0.1,0.1,0.1,0.2,0.2l55.1,55.1    C420.456,377.706,420.456,388.206,410.256,398.806z"/>
+                    <path d="M256.056,112.706c26.2,4.4,50,16.8,69,35.8s31.3,42.8,35.8,69c1.1,6.6,6.8,11.2,13.3,11.2c0.8,0,1.5-0.1,2.3-0.2    c7.4-1.2,12.3-8.2,11.1-15.6c-5.4-31.7-20.4-60.6-43.3-83.5s-51.8-37.9-83.5-43.3c-7.4-1.2-14.3,3.7-15.6,11    S248.656,111.506,256.056,112.706z"/>
+                    <path d="M473.256,209.006c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2,3.7-15.5,11    c-1.2,7.4,3.7,14.3,11.1,15.6c46.6,7.9,89.1,30,122.9,63.7c33.8,33.8,55.8,76.3,63.7,122.9c1.1,6.6,6.8,11.2,13.3,11.2    c0.8,0,1.5-0.1,2.3-0.2C469.556,223.306,474.556,216.306,473.256,209.006z"/>
+                  </g>
+                </g>
+              </svg>
+              <a href="tel:+420774886717">+420 774 886 717</a>
+            </span>
+          </div>
+          
+          <div class="contact-item">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#19196F" width="25px" height="25px" viewBox="0 0 56 56">
+                <path d="M 9.4843 48.1914 L 47.2184 48.1914 C 51.4376 48.1914 53.8751 45.7539 53.8751 40.9258 L 53.8751 15.0508 C 53.8751 10.2461 51.4141 7.8086 46.5157 7.8086 L 8.7812 7.8086 C 4.5858 7.8086 2.1249 10.2227 2.1249 15.0508 L 2.1249 40.9258 C 2.1249 45.7773 4.6093 48.1914 9.4843 48.1914 Z M 25.2109 29.1836 L 7.5155 11.7227 C 8.0312 11.5117 8.6405 11.3945 9.3671 11.3945 L 46.6564 11.3945 C 47.3826 11.3945 48.0157 11.5117 48.5548 11.7696 L 30.8827 29.1836 C 29.8749 30.1914 28.9843 30.6367 28.0468 30.6367 C 27.1093 30.6367 26.2187 30.1914 25.2109 29.1836 Z M 5.7109 40.9258 L 5.7109 15.0508 C 5.7109 14.8867 5.7109 14.9570 5.7109 14.8164 L 19.1874 28.0352 L 5.7343 41.3242 C 5.7109 41.2070 5.7109 41.0664 5.7109 40.9258 Z M 50.2890 15.0742 L 50.2890 40.9492 C 50.2890 41.0430 50.2890 41.1602 50.2890 41.2539 L 36.9062 28.0352 L 50.2890 14.8867 C 50.2890 15.0742 50.2890 15.0742 50.2890 15.0742 Z M 9.3671 44.6055 C 8.6874 44.6055 8.1249 44.5117 7.6327 44.3008 L 21.6484 30.4492 L 23.1718 31.9492 C 24.8124 33.5664 26.3827 34.2461 28.0468 34.2461 C 29.6874 34.2461 31.2812 33.5664 32.9218 31.9492 L 34.4452 30.4492 L 48.4376 44.2773 C 47.9452 44.5117 47.3360 44.6055 46.6564 44.6055 Z"/>
+              </svg>
+              <a href="mailto:info@indigofactory.cz">info@indigofactory.cz</a>
+            </span>
+          </div>
+
+        </div>
+
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="200px" height="45px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 1772 348">
+            <defs>
+             <style type="text/css">
+
+               .fil0 {fill:#212A6B;fill-rule:nonzero}
+               .fil1 {fill:#3A701F;fill-rule:nonzero}
+
+             </style>
+            </defs>
+            <g id="Layer_x0020_1">
+             <metadata id="CorelCorpID_0Corel-Layer"/>
+             <g id="_800649520">
+              <g>
+               <polygon class="fil0" points="26,83 26,287 0,293 0,89 "/>
+               <path class="fil0" d="M59 293l0 -154 22 -3 0 23c7,-9 15,-16 22,-20 10,-5 20,-7 32,-7 17,0 31,4 42,11 12,9 18,22 18,39l0 106 -23 5 0 -108c0,-9 -3,-16 -8,-21 -7,-6 -16,-9 -29,-9 -15,0 -28,4 -37,11 -11,9 -17,22 -17,37l0 85 -22 5z"/>
+               <path class="fil0" d="M220 214c0,-23 9,-43 25,-58 16,-15 34,-22 56,-22 12,0 23,3 33,8 11,6 18,13 24,22l0 -83 21 -4 0 213 -21 4 0 -29c-6,8 -14,15 -24,21 -11,5 -22,8 -33,8 -22,0 -40,-7 -56,-21 -16,-16 -25,-35 -25,-59zm24 0c0,16 5,29 16,40 11,11 25,17 41,17 15,0 29,-6 40,-17 11,-11 17,-24 17,-40 0,-16 -6,-29 -17,-40 -11,-11 -25,-16 -40,-16 -16,0 -29,5 -40,16 -11,11 -17,24 -17,40z"/>
+               <polygon class="fil0" points="399,140 399,293 422,288 422,135 "/>
+               <path class="fil0" d="M518 132c1,0 3,0 6,0 3,0 5,0 7,0 11,0 21,0 31,-2 10,-1 16,-3 19,-5l-4 21 -14 6c3,3 6,7 9,12 4,8 5,17 5,27 0,11 -2,21 -8,30 -5,8 -9,13 -13,14 7,3 13,8 18,15 7,10 10,22 10,36 0,16 -5,30 -17,42 -12,13 -29,20 -49,20 -14,0 -27,-3 -40,-10 -10,-6 -20,-14 -28,-24l18 -13c6,7 13,13 20,17 8,5 18,8 30,8 12,0 22,-4 31,-11 8,-7 12,-17 12,-29 0,-12 -3,-22 -11,-29 -8,-7 -19,-10 -32,-10 -8,0 -15,0 -20,1 -6,1 -11,3 -16,6l3 -18c-7,-4 -12,-8 -16,-13 -8,-9 -11,-20 -11,-32 0,-18 5,-32 17,-43 12,-10 26,-16 43,-16zm0 21c-12,0 -21,4 -29,13 -6,8 -9,16 -9,25 0,9 3,17 9,25 7,9 17,13 29,13 12,0 21,-4 29,-12 6,-7 9,-16 9,-26 0,-10 -3,-19 -9,-26 -8,-8 -17,-12 -29,-12z"/>
+               <path class="fil0" d="M686 134c22,0 41,8 56,23 16,16 24,35 24,57 0,22 -8,41 -24,56 -15,16 -34,24 -56,24 -22,0 -41,-8 -56,-24 -16,-15 -24,-34 -24,-56 0,-22 8,-41 24,-57 15,-15 34,-23 56,-23zm0 23c-16,0 -29,6 -40,17 -11,11 -17,24 -17,40 0,15 6,29 17,40 11,11 24,16 40,16 16,0 29,-5 40,-16 11,-11 16,-25 16,-40 0,-16 -5,-29 -16,-40 -11,-11 -24,-17 -40,-17z"/>
+              </g>
+              <g>
+               <polygon class="fil0" points="791,86 902,86 908,110 817,110 817,171 887,171 887,194 817,194 817,287 791,293 "/>
+               <path class="fil0" d="M957 239c0,10 3,19 10,25 7,6 16,10 27,10 11,0 20,-4 28,-10 8,-7 12,-15 12,-25 0,-10 -4,-19 -12,-25 -8,-7 -17,-10 -28,-10 -11,0 -20,3 -27,10 -7,6 -10,15 -10,25zm-23 0c0,-15 5,-28 16,-39 11,-11 24,-17 39,-17 11,0 21,2 29,6 8,5 14,10 16,18l0 -23c0,-10 -2,-18 -8,-22 -5,-5 -13,-7 -25,-7 -12,0 -20,0 -23,0 -9,2 -18,5 -29,11l6 -25c11,-3 19,-5 24,-6 5,-1 12,-1 21,-1 17,0 29,2 37,7 14,8 20,24 20,47l0 100 -23 4 0 -19c-4,7 -10,13 -18,16 -8,3 -17,5 -27,5 -15,0 -28,-5 -39,-16 -11,-11 -16,-24 -16,-39z"/>
+               <path class="fil0" d="M1079 214c0,22 8,40 24,56 16,16 34,24 56,24 11,0 21,-2 30,-6 6,-2 12,-5 19,-10l-14 -20c-4,3 -8,6 -14,8 -7,3 -14,4 -21,4 -16,0 -30,-5 -41,-16 -10,-11 -16,-25 -16,-40 0,-16 6,-30 16,-41 11,-11 25,-16 41,-16 8,0 15,1 21,4 5,2 10,4 14,8l14 -19c-6,-5 -13,-9 -19,-11 -9,-4 -19,-5 -30,-5 -22,0 -40,7 -56,23 -16,16 -24,35 -24,57z"/>
+               <path class="fil0" d="M1252 97l23 -3 0 43 48 0 0 23 -48 0 0 83c0,8 3,14 8,19 5,5 11,8 18,8l26 0 -4 20c-2,1 -6,2 -11,2 -4,0 -8,1 -11,1 -16,0 -28,-5 -36,-15 -9,-10 -13,-21 -13,-35l0 -83 -21 0 4 -23 17 0 0 -40z"/>
+               <path class="fil0" d="M1429 134c22,0 41,8 56,23 16,16 24,35 24,57 0,22 -8,41 -24,56 -15,16 -34,24 -56,24 -22,0 -41,-8 -56,-24 -16,-15 -24,-34 -24,-56 0,-22 8,-41 24,-57 15,-15 34,-23 56,-23zm0 23c-16,0 -29,6 -40,17 -11,11 -17,24 -17,40 0,15 6,29 17,40 11,11 24,16 40,16 15,0 29,-5 40,-16 11,-11 16,-25 16,-40 0,-16 -5,-29 -16,-40 -11,-11 -25,-17 -40,-17z"/>
+               <path class="fil0" d="M1531 139l22 -3 0 28c5,-9 10,-15 16,-20 10,-8 23,-13 38,-13l-8 23c-11,0 -21,4 -30,13 -10,9 -16,22 -16,37l0 84 -22 5 0 -154z"/>
+               <polygon class="fil0" points="1629,140 1651,134 1707,235 1751,134 1772,140 1681,347 1659,341 1695,259 "/>
+              </g>
+              <path class="fil1" d="M401 99c0,0 -6,-84 76,-99 0,0 9,71 -76,99z"/>
+             </g>
+            </g>
+           </svg>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+  
+    <script src="script.js"></script>
+</body>
+</html>

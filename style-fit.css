@@ -1,0 +1,101 @@
+.fitting__wrapper {
+  display: grid;
+  grid-template-columns: 140px 1fr 200px;
+  gap: 3%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fitting__subject-img {
+  width: 140px;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.fitting-active {
+  border: 5px solid #000fe0;
+}
+
+.fitting__window {
+  width: 735px;
+  height: 735px;
+  position: relative;
+}
+
+.fitting__subject-bg {
+  width: 100%;
+  z-index: 0;
+  display: none;
+}
+
+.fitting-shown {
+  display: block;
+}
+
+.fitting__window div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 735px;
+  height: 735px;
+}
+
+.fitting__window svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 735px;
+  height: 735px;
+}
+
+.fitting__window mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 735px;
+  height: 735px;
+}
+
+.fitting__window mask image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 735px;
+  height: 735px;
+}
+
+.fitting__container-svg {
+  mix-blend-mode: multiply;
+  mask-type: alpha;
+}
+
+.fitting__container-svg pattern {
+  transform-origin: 50% 50%;
+}
+
+.fitting__settings-thumbs {
+  display: grid;
+  grid-template-columns: 45px 45px 45px;
+  gap: 5px;
+}
+
+.fitting__settings-thumb-item {
+  width: 100%;
+  cursor: pointer;
+}
+
+.fitting__settings-range {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.fitting__settings-range label {
+  margin-top: 5px;
+  cursor: default;
+}
+
