@@ -8,32 +8,61 @@
     <link rel="stylesheet" href="footer.css">
 </head>
 <body>
+
+  <div class="fitting__description">
+    <p>V naší šatně si můžete vyzkoušet naše vzory na konkrétním předmětu - polštář, kočárek, závěsy atd.</p>
+    <p>Můžete si pohrát s velikostí potisku a představit si, jestli by vypadal lépe ve větší nebo menší velikosti.</p>
+    <p>A nezapomeňte nám dát vědět, pokud se rozhodnete změnit velikost potisku vzoru popsanou u každé položky!</p>
+  </div>
+  
   <div class="fitting__wrapper">
 
     <div class="fitting__switcher">
-      <div id="pillow" style="background-image: url('/user/documents/images/pillow.jpg')" class="fitting__subject-img fitting-active"></div>
-      <div id="bed" style="background-image: url('/user/documents/images/bed.jpg')" class="fitting__subject-img"></div>
+      <div id="armchear" style="background-image: url('/user/documents/images/armchear.jpg')" class="fitting__subject-img"></div>
+      <div id="dress" style="background-image: url('/user/documents/images/dress.jpg')" class="fitting__subject-img"></div>
       <div id="smallbed" style="background-image: url('/user/documents/images/smallbed.jpg')" class="fitting__subject-img"></div>
-      <div id="pillow2" style="background-image: url('/user/documents/images/pillow2.jpg')" class="fitting__subject-img"></div>
       <div id="buggy" style="background-image: url('/user/documents/images/buggy.jpg')" class="fitting__subject-img"></div>
       <div id="curtains" style="background-image: url('/user/documents/images/curtains.jpg')" class="fitting__subject-img"></div>
     </div>
 
     <div class="fitting__window">
 
-      <img src="/user/documents/images/pillow.jpg" data-switcher="pillow" class="fitting__subject-bg fitting-shown"></img>
-      <img src="/user/documents/images/bg_bed.png" data-switcher="bed" class="fitting__subject-bg"></img>
+      <img src="/user/documents/images/armchear.jpg" data-switcher="armchear" class="fitting__subject-bg"></img>
+      <img src="/user/documents/images/dress.jpg" data-switcher="dress" class="fitting__subject-bg"></img>
       <img src="/user/documents/images/bg_smallbed.jpg" data-switcher="smallbed" class="fitting__subject-bg"></img>
-      <img src="/user/documents/images/pillow2.jpg" data-switcher="pillow2" class="fitting__subject-bg"></img>
       <img src="/user/documents/images/buggy.jpg" data-switcher="buggy" class="fitting__subject-bg"></img>
       <img src="/user/documents/images/curtains.jpg" data-switcher="curtains" class="fitting__subject-bg"></img>
+
+      <div class="fitting__container-svg" data-switcher="armchear">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+            <mask id="maskArmchear">
+                <image href="/user/documents/images/armchear-mask.png" width="735" height="735"></image>
+            </mask>
+            <pattern id="patternArmchear" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+              <image href="" width="100%"></image>
+            </pattern>
+            <rect mask="url(#maskArmchear)" fill="url(#patternArmchear)" width="735" height="735"></rect>
+        </svg>
+      </div>
+
+      <div class="fitting__container-svg" data-switcher="dress">
+        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
+            <mask id="maskDress">
+                <image href="/user/documents/images/dress-mask.png" width="735" height="735"></image>
+            </mask>
+            <pattern id="patternDress" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+              <image href="" width="100%"></image>
+            </pattern>
+            <rect mask="url(#maskDress)" fill="url(#patternDress)" width="735" height="735"></rect>
+        </svg>
+      </div>
 
       <div class="fitting__container-svg" data-switcher="smallbed">
         <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
             <mask id="maskSmallbedPillow">
               <image href="/user/documents/images/smallbed-mask-pillow.png" width="735" height="735"></image>
             </mask>
-            <pattern id="patternSmallbedPillow" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+            <pattern id="patternSmallbedPillow" data-cell="pillow" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
               <image href="" width="100%"></image>
             </pattern>
             <rect mask="url(#maskSmallbedPillow)" fill="url(#patternSmallbedPillow)" width="735" height="735"></rect>
@@ -45,22 +74,10 @@
             <mask id="maskSmallbedDuvetCover">
               <image href="/user/documents/images/smallbed-mask-blanket.png" width="735" height="735"></image>
             </mask>
-            <pattern id="patternSmallbedDuvetCover" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
+            <pattern id="patternSmallbedDuvetCover" data-cell="blanket" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
               <image href="" width="100%"></image>
             </pattern>
             <rect mask="url(#maskSmallbedDuvetCover)" fill="url(#patternSmallbedDuvetCover)" width="735" height="735"></rect>
-        </svg>
-      </div>
-
-      <div class="fitting__container-svg" data-switcher="pillow2">
-        <svg xmlns="https://www.w3.org/2000/svg" style="z-index: 1;">
-            <mask id="maskPillow2">
-                <image href="/user/documents/images/pillow2-mask.png" width="735" height="735"></image>
-            </mask>
-            <pattern id="patternPillow2" width="100%" height="100%" patternUnits="objectBoundingBox" patternTransform="rotate(180,.5,.5) scale(0.25)" preserveAspectRatio="none">
-              <image href="" width="100%"></image>
-            </pattern>
-            <rect mask="url(#maskPillow2)" fill="url(#patternPillow2)" width="735" height="735"></rect>
         </svg>
       </div>
 
@@ -92,6 +109,13 @@
 
     <div class="fitting__settings">
       <div class="fitting__settings-header">
+
+        <label class="fitting__settings-select-title" for="fitting__settings-select-cells">Vybraná buňka:</label>
+
+        <select name="cells" id="fitting__settings-select-cells">
+          <option value="pillow">Polštář</option>
+          <option value="blanket">Peřina</option>
+        </select>
 
       </div>
 
