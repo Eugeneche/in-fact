@@ -1,9 +1,21 @@
-let currentSwitchData = "pillow", currentPatternSrc
+let currentSwitchData = document.querySelector(".fitting__subject-img")?.getAttribute("id"), 
+activeCell = document.querySelector("#fitting__settings-select-cells option")?.value,
+currentPatternSrc
+currentSwitchData === "smallbed" ? document.querySelector(".fitting__settings-header").style.display = "block" : document.querySelector(".fitting__settings-header").style.display = "none"
 
-document.querySelectorAll(".fitting__container-svg").forEach((el, i)=> {
+document.querySelectorAll(".fitting__subject-img").forEach((el, i) => {
 
-    i === 0 && el.style.removeProperty("display")
-    i !== 0 && el.style.setProperty("display", "none")
+    i === 0 && el.classList.add("fitting-active")
+})
+
+document.querySelectorAll(".fitting__container-svg").forEach((el, i) => {
+
+    i === 0 && el.style.setProperty("display", "block")
+})
+
+document.querySelectorAll(".fitting__subject-bg").forEach((el, i) => {
+
+    i === 0 && el.classList.add("fitting-shown")
 })
 
 document.querySelectorAll(".fitting__subject-img").forEach(el => {
@@ -38,43 +50,107 @@ function switchSubject(e) {
             el.style.setProperty("display", "none")
         }
     })
+
+    currentSwitchData === "smallbed" ? document.querySelector(".fitting__settings-header").style.display = "block" : document.querySelector(".fitting__settings-header").style.display = "none"
 }
 
 function switchPattern(e) {
-    currentPatternSrc = e.target.currentSrc
 
-    document.querySelectorAll(".fitting__container-svg").forEach(el => {
+    if (currentSwitchData !== "smallbed") {
 
-        if (el.getAttribute("data-switcher") === currentSwitchData) {
-            el.querySelector("pattern image").setAttribute("href", currentPatternSrc)
-        } 
-    })
+        currentPatternSrc = e.target.currentSrc
+
+        document.querySelectorAll(".fitting__container-svg").forEach(el => {
+
+            if (el.getAttribute("data-switcher") === currentSwitchData) {
+                el.querySelector("pattern image").setAttribute("href", currentPatternSrc)
+            } 
+        })
+
+    }  
+    
+    if (currentSwitchData === "smallbed" && activeCell === "pillow") {
+
+        currentPatternSrc = e.target.currentSrc
+
+        document.querySelector("#patternSmallbedPillow image").setAttribute("href", currentPatternSrc)
+
+    } else if (currentSwitchData === "smallbed" && activeCell === "blanket") {
+        
+        currentPatternSrc = e.target.currentSrc
+
+        document.querySelector("#patternSmallbedDuvetCover image").setAttribute("href", currentPatternSrc)
+    }
+    
 }
 
-document.getElementById("printScale").addEventListener("input", (e) => currentPatternSrc && setScale(e))
+document.getElementById("printScale")?.addEventListener("input", (e) => currentPatternSrc && setScale(e))
 
 function setScale(e) {
 
-    document.querySelectorAll(".fitting__container-svg").forEach(el => {
+    if (currentSwitchData !== "smallbed") {
+        document.querySelectorAll(".fitting__container-svg").forEach(el => {
 
-        if (el.getAttribute("data-switcher") === currentSwitchData) {
-            let patternTransformAttr = el.querySelector("pattern").getAttribute("patternTransform")
-            let changeableAttr = patternTransformAttr.replace(/scale\(.+\)/, `scale(${e.target.value})`)
-            el.querySelector("pattern").setAttribute("patternTransform", `${changeableAttr}`)
-        } 
-    })
+            if (el.getAttribute("data-switcher") === currentSwitchData) {
+                let patternTransformAttr = el.querySelector("pattern").getAttribute("patternTransform")
+                let changeableAttr = patternTransformAttr.replace(/scale\(.+\)/, `scale(${e.target.value})`)
+                el.querySelector("pattern").setAttribute("patternTransform", `${changeableAttr}`)
+            } 
+        })
+    }
+
+    if (currentSwitchData === "smallbed" && activeCell === "pillow") {
+
+        let patternTransformAttr = document.querySelector("#patternSmallbedPillow").getAttribute("patternTransform")
+        let changeableAttr = patternTransformAttr.replace(/scale\(.+\)/, `scale(${e.target.value})`)
+
+        document.querySelector("#patternSmallbedPillow").setAttribute("patternTransform", `${changeableAttr}`)
+
+    } else if (currentSwitchData === "smallbed" && activeCell === "blanket") {
+        
+        let patternTransformAttr = document.querySelector("#patternSmallbedPillow").getAttribute("patternTransform")
+        let changeableAttr = patternTransformAttr.replace(/scale\(.+\)/, `scale(${e.target.value})`)
+
+        document.querySelector("#patternSmallbedDuvetCover").setAttribute("patternTransform", `${changeableAttr}`)
+    }
 }
 
-document.getElementById("printRotate").addEventListener("input", (e) => currentPatternSrc && setRotate(e))
+document.getElementById("printRotate")?.addEventListener("input", (e) => currentPatternSrc && setRotate(e))
 
 function setRotate(e) {
 
-    document.querySelectorAll(".fitting__container-svg").forEach(el => {
+    if (currentSwitchData !== "smallbed") {
+        document.querySelectorAll(".fitting__container-svg").forEach(el => {
 
-        if (el.getAttribute("data-switcher") === currentSwitchData) {
-            let patternTransformAttr = el.querySelector("pattern").getAttribute("patternTransform")
-            let changeableAttr = patternTransformAttr.replace(/rotate\(.+\)\s/, `rotate(${e.target.value}) `)
-            el.querySelector("pattern").setAttribute("patternTransform", `${changeableAttr}`)
-        } 
+            if (el.getAttribute("data-switcher") === currentSwitchData) {
+                let patternTransformAttr = el.querySelector("pattern").getAttribute("patternTransform")
+                let changeableAttr = patternTransformAttr.replace(/rotate\(.+\)\s/, `rotate(${e.target.value}) `)
+                el.querySelector("pattern").setAttribute("patternTransform", `${changeableAttr}`)
+            } 
+        })
+    }
+
+    if (currentSwitchData === "smallbed" && activeCell === "pillow") {
+
+        let patternTransformAttr = document.querySelector("#patternSmallbedPillow").getAttribute("patternTransform")
+        let changeableAttr = patternTransformAttr.replace(/rotate\(.+\)\s/, `rotate(${e.target.value}) `)
+
+        document.querySelector("#patternSmallbedPillow").setAttribute("patternTransform", `${changeableAttr}`)
+
+    } else if (currentSwitchData === "smallbed" && activeCell === "blanket") {
+        
+        let patternTransformAttr = document.querySelector("#patternSmallbedPillow").getAttribute("patternTransform")
+        let changeableAttr = patternTransformAttr.replace(/rotate\(.+\)\s/, `rotate(${e.target.value}) `)
+
+        document.querySelector("#patternSmallbedDuvetCover").setAttribute("patternTransform", `${changeableAttr}`)
+    }
+}
+
+function setFabricOnBed() {
+
+    document.querySelector("#fitting__settings-select-cells")?.addEventListener("change", (e) => {
+        activeCell = e.target.value
     })
 }
+
+setFabricOnBed()
