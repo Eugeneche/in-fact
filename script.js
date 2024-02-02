@@ -58,12 +58,12 @@ function switchPattern(e) {
 
     if (currentSwitchData !== "smallbed") {
 
-        currentPatternSrc = e.target.currentSrc
+        currentPatternSrc = e.target.currentSrc.substring(e.target.currentSrc.lastIndexOf('/') + 1)
 
         document.querySelectorAll(".fitting__container-svg").forEach(el => {
 
             if (el.getAttribute("data-switcher") === currentSwitchData) {
-                el.querySelector("pattern image").setAttribute("href", currentPatternSrc)
+                el.querySelector("pattern image").setAttribute("href", `/user/documents/patterns/${currentPatternSrc}`)
             } 
         })
 
