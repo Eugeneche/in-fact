@@ -6,6 +6,11 @@
   margin: 0 auto;
 }
 
+.fitting__description  {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .fitting__subject-img {
   width: 140px;
   height: 140px;
@@ -77,17 +82,37 @@
   transform-origin: 50% 50%;
 }
 
+/* select */
+
+#fitting__settings-select-cells {
+  width: 100%;
+}
+.fitting__settings-header {
+  margin-bottom: 20px;
+}
+
+.fitting__settings-select-title {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* end of select */
+/* end of thumbs */
 .fitting__settings-thumbs {
   display: grid;
   grid-template-columns: 45px 45px 45px;
   gap: 5px;
+  height: 525px;
+  overflow-y: scroll;
 }
 
 .fitting__settings-thumb-item {
   width: 100%;
   cursor: pointer;
+  height: 45px;
 }
-
+/* end of thumbs */
+/* range */
 .fitting__settings-range {
   display: flex;
   flex-direction: column;
@@ -98,4 +123,5 @@
   margin-top: 5px;
   cursor: default;
 }
+/* end of range */
 
