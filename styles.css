@@ -41,6 +41,15 @@
     margin: 0;
 }
 
+span.btn.btn-default.unveil-button, a.btn.btn-conversion {
+    color: #ffffff;
+}
+
+.order-button-suffix {
+    display: none;
+}
+
+
 @media screen and (max-width: 768px) {
 
     .subcategories {
